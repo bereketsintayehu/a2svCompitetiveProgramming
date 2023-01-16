@@ -1,11 +1,15 @@
 class Solution:
     def topKFrequent(self, nums: list[int], k: int) -> list[int]:
 
-        elements = list(set(nums))
+        elemCount = {}
+        
+        for i in nums:
+            if i in elemCount:
+                elemCount[i] += 1
+            else:
+                elemCount[i] = 1
 
-        def sortKey(e):
-            return nums.count(e)
+        elemCount = sorted(elemCount, key=elemCount.get, reverse=True)
 
-        elements.sort(key=sortKey, reverse=True)
-
-        return elements[:k]
+        return elemCount[:k]
+        
