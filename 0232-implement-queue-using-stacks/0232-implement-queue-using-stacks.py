@@ -2,13 +2,15 @@ from collections import deque
 class MyQueue:
     def __init__(self):
         self.stack = deque()
+        self.tempStack = deque()
 
     def push(self, x: int) -> None:
-        self.stack.reverse()
+        while len(self.stack) > 0:
+            self.tempStack.append(self.stack.pop())
         self.stack.append(x)
-        self.stack.reverse()
-        
-
+        while len(self.tempStack) > 0:
+            self.stack.append(self.tempStack.pop())
+                
     def pop(self) -> int:
         return self.stack.pop()
         
