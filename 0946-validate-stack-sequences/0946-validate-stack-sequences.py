@@ -10,6 +10,6 @@ class Solution:
                 stack.pop()
                 i += 1
 
-        return list(stack) == popped[i:][::-1]
+        return not bool(stack)
                 
         
