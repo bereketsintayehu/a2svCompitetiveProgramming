@@ -9,6 +9,5 @@ class Solution:
                     grid[i][0] += grid[i - 1][0]
                 elif j > 0:
                     grid[0][j] += grid[0][j - 1]
-        print(grid)
 
         return grid[-1][-1]
