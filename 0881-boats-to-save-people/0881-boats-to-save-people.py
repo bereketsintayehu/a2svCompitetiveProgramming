@@ -4,12 +4,7 @@ class Solution:
         ans = l = 0
         r = len(people) - 1
         
-        while l<=r:
-            if l == r:
-                ans += 1
-                l += 1
-                break
-                
+        while l<=r: 
             if people[r] + people[l] <= limit:
                 l += 1
             r -= 1
