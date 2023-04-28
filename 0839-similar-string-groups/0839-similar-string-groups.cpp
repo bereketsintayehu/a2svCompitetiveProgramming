@@ -14,7 +14,6 @@ class Solution {
   }
 
  private:
-  // Dfs on string A[i]
   void dfs(const vector<string>& A, int i, vector<bool>& seen) {
     seen[i] = true;
     for (int j = 0; j < A.size(); ++j)
