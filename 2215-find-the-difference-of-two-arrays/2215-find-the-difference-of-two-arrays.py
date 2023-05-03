@@ -3,4 +3,4 @@ class Solution:
         set1 = set(nums1)
         set2 = set(nums2)
 
-        return [list(set1.difference(set2)), list(set2.difference(set1))]
+        return[[i for i in set1 if i not in set2], [i for i in set2 if i not in set1]]
