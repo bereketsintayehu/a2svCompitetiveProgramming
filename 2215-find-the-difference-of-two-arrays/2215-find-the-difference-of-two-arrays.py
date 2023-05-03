@@ -3,4 +3,4 @@ class Solution:
         set1 = set(nums1)
         set2 = set(nums2)
 
-        return[[i for i in set1 if i not in set2], [i for i in set2 if i not in set1]]
+        return[set1-set2, set2-set1]
