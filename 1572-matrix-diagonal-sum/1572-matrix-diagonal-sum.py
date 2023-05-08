@@ -1,7 +1,7 @@
 class Solution:
     def diagonalSum(self, mat: List[List[int]]) -> int:
         ans = 0
-        n = len(mat[0])
+        n = len(mat)
         
         for i in range(n):
             ans += mat[i][i]
