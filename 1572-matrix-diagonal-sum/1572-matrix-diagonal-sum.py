@@ -7,7 +7,7 @@ class Solution:
             ans += mat[i][i]
         
         for i in range(n):
-            ans += mat[n - i - 1][i]
+            ans += mat[i][n - i - 1]
             
         if n % 2 == 1:
             ans -= mat[n//2][n//2]
