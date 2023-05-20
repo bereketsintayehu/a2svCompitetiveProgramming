@@ -20,7 +20,7 @@ class Solution:
         if res > 0:  
           return value * res  
 
-      return -1  
+      return -1.0
 
     for A, C in queries:
       if A not in graph and C not in graph:
