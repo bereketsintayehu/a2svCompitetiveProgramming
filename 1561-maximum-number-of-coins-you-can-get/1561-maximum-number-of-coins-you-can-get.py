@@ -1,12 +1,10 @@
-import heapq
-
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
         ans = 0
         
-        nPiles = heapq.nlargest((len(piles) // 3) * 2, piles)
+        piles.sort(reverse=True)
         
-        for i in range(1, len(nPiles), 2):
-            ans += nPiles[i]
+        for i in range(1, len(piles)-len(piles)//3, 2):
+            ans += piles[i]
         
         return ans
