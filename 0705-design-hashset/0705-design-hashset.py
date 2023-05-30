@@ -1,17 +1,13 @@
 class MyHashSet:
-
+    __slots__ = ('hset',)
     def __init__(self):
         self.hset = set()
-        
 
     def add(self, key: int) -> None:
         self.hset.add(key)
-        
 
     def remove(self, key: int) -> None:
-        if key in self.hset:
-            self.hset.remove(key)
-        
+        self.hset.discard(key)
 
     def contains(self, key: int) -> bool:
         return key in self.hset
