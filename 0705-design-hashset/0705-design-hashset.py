@@ -1,5 +1,4 @@
 class MyHashSet:
-    __slots__ = ('hset',)
     def __init__(self):
         self.hset = set()
 
