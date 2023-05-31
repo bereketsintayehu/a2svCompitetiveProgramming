@@ -1,5 +1,3 @@
-from statistics import mean
-from collections import defaultdict
 class UndergroundSystem:
 
     def __init__(self):
