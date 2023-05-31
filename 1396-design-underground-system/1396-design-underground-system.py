@@ -1,19 +1,17 @@
 from statistics import mean
-
+from collections import defaultdict
 class UndergroundSystem:
 
     def __init__(self):
         self.customer = {}
-        self.stations = {}
+        self.stations = defaultdict(list)
 
     def checkIn(self, id: int, stationName: str, t: int) -> None:
         self.customer[id] = (stationName, t)
 
     def checkOut(self, id: int, stationName: str, t: int) -> None:
-        if self.customer[id][0] + '->' + stationName in self.stations:
-            self.stations[self.customer[id][0] + '->' + stationName].append(t - self.customer[id][1])
-        else:
-            self.stations[self.customer[id][0] + '->' + stationName] = [t - self.customer[id][1]]
+        startStation, t1 = self.customer[id]
+        self.stations[startStation + '->' + stationName].append(t -t1)
         del self.customer[id]
 
     def getAverageTime(self, startStation: str, endStation: str) -> float:
