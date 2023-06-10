@@ -24,7 +24,7 @@ class Solution:
 
             tail = reverseList(slow)
 
-            while tail:
+            while head != slow:
                 ans = max(ans, head.val + tail.val)
                 head = head.next
                 tail = tail.next
