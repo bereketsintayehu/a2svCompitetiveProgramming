@@ -25,9 +25,7 @@ class Solution:
                 ans = min(ans, end - start + 1)
                 if s[start] in v:
                     map[s[start]] += 1
-                #     if map[s[start]] <= 0:
-                #         start += 1
-                # else:
+
                 start += 1
 
         if len(map) == 0:
