@@ -4,8 +4,8 @@ for _ in range(int(input())):
     n = int(input())
     arr = list(map(int, input()))
     d = defaultdict(int)
-    d[0] = 1
     ans = 0
+    d[0] = 1
     
     curr = 0
     for i in range(n):
