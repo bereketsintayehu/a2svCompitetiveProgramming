@@ -10,7 +10,7 @@ class Solution:
                 return
             
             for num in nums:
-                if num not in bucket:
+                if num not in s:
                     s.add(num)
                     bucket.append(num)
                     backtrack(num)
